@@ -6,6 +6,10 @@ exact registered source. Everything the app needs lives inside this folder:
 no other workspace project, and no npm copy of the ThreeUI package, is
 referenced at build or runtime.
 
+**Live site:** [https://bestsellers-book-showcase-softtech1.vercel.app](https://bestsellers-book-showcase-softtech1.vercel.app)
+· **Source (private):** [Dheeraj-Baghel/bestsellers-book-showcase](https://github.com/Dheeraj-Baghel/bestsellers-book-showcase)
+· [deployment notes](DEPLOYMENT.md)
+
 ## Run
 
 ```bash
@@ -16,6 +20,8 @@ npm run dev          # http://127.0.0.1:4334
 - `npm run build` — exact-source verification + strict typecheck + production build
 - `npm run preview` — serve the production build on 4334
 - `npm run test:browser` — real-Chrome workflow checks against the production build
+  (`TEST_BASE_URL=<origin> npm run test:browser` runs them against a deployment;
+  results go to `artifacts/testing/live/`)
 - `npm run verify:source` — hash-verify every vendored file on its own
 
 ## Exact source
