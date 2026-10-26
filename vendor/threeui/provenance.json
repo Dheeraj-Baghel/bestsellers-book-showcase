@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "bestsellers-book-showcase",
+  "canonicalSha256": "7c1ed1ca4a4c58f1c33956c84edd8f7ba450ea0312df718701e634a207568138",
+  "sourceBundleUrl": "https://threeui.com/source-code/bestsellers-book-showcase.json",
+  "package": {
+    "name": "@designcodeio/threeui",
+    "version": "1.2.0",
+    "tarballUrl": "https://registry.npmjs.org/@designcodeio/threeui/-/threeui-1.2.0.tgz",
+    "integrity": "sha512-E6F/+IPfLKYatB5W62H3gK1bp9WYvfO6xuWBaBh8oLVR7fbTeeEwgLqqy7ZPMA0zmDpAy03nKYOIswBXsstL2g=="
+  },
+  "note": "Registered React/CSS text comes from the source-code bundle (code fields hash-verified). The canonical HTML's code field is omitted from the bundle; its bytes were taken from @designcodeio/threeui 1.2.0 lib-dist/assets/landing-pages/bestsellers-book-showcase.html, which matches the required SHA-256 exactly. The live website HTML currently differs from this requested revision (55 KB vs the registered 3.5 MB document). pageTypography.ts and pageRecipes.ts are support modules the component file imports; their bytes were taken hash-verified from the same registry's kage-landing-page bundle, which registers identical hashes.",
+  "additionalFiles": [
+    {
+      "localPath": "vendor/threeui/src/shaders/fonts/fragment-mono.woff2",
+      "role": "shared-style-font",
+      "bytes": 15176,
+      "sha256": "4f4dc27f4a770c0d02fde800daa836c8adc0d1e423b28da74baaf0d1cc3ab96c",
+      "source": "Decoded byte-for-byte from the Fragment Mono data URL in @designcodeio/threeui 1.2.0 lib-dist/style.css; resolves the original registered shared stylesheet's relative font path."
+    },
+    {
+      "localPath": "vendor/threeui/src/shaders/landing-pages/pageTypography.ts",
+      "role": "controls-source",
+      "bytes": 15028,
+      "sha256": "809cc65797d531cd3b3ca5a56815d55d24b3ee8d293e4e4bad6fdfe6c83244cc",
+      "source": "Registered text from https://threeui.com/source-code/kage-landing-page.json (same registry, identical hash); imported by LandingPages.tsx and LandingPageFrame.tsx."
+    },
+    {
+      "localPath": "vendor/threeui/src/shaders/landing-pages/pageRecipes.ts",
+      "role": "controls-source",
+      "bytes": 74927,
+      "sha256": "c9d9849cc255bac2d1d938d088c50917f84916f1c516d2bbb27fcfd803523233",
+      "source": "Registered text from https://threeui.com/source-code/kage-landing-page.json (same registry, identical hash); provides BESTSELLERS_TYPOGRAPHY."
+    }
+  ],
+  "files": [
+    {
+      "path": "src/shaders/landing-pages/LandingPages.tsx",
+      "language": "tsx",
+      "role": "component",
+      "bytes": 40525,
+      "lines": 915,
+      "sha256": "4d379461ad00eb4de7900df312878035383de7e1ed4e13283b8143a2eea9d30a",
+      "localPath": "vendor/threeui/src/shaders/landing-pages/LandingPages.tsx"
+    },
+    {
+      "path": "src/shaders/landing-pages/LandingPageFrame.tsx",
+      "language": "tsx",
+      "role": "frame-component",
+      "bytes": 6756,
+      "lines": 177,
+      "sha256": "61de2cc50888aac4ac5557420b07fa47ed3543bb57c1e0055fafdefa53dbaa78",
+      "localPath": "vendor/threeui/src/shaders/landing-pages/LandingPageFrame.tsx"
+    },
+    {
+      "path": "public/landing-pages/bestsellers-book-showcase.html",
+      "language": "html",
+      "role": "canonical-source",
+      "bytes": 3546441,
+      "lines": 1871,
+      "sha256": "7c1ed1ca4a4c58f1c33956c84edd8f7ba450ea0312df718701e634a207568138",
+      "sourceUrl": "/landing-pages/bestsellers-book-showcase.html",
+      "localPath": "public/landing-pages/bestsellers-book-showcase.html"
+    },
+    {
+      "path": "src/shaders/threeui.css",
+      "language": "css",
+      "role": "shared-style",
+      "bytes": 40715,
+      "lines": 1775,
+      "sha256": "efe4447139f1358dd8e9be68edf6fa46cbefbd1de423a4d6c439ca61d2c8eccf",
+      "localPath": "vendor/threeui/src/shaders/threeui.css"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "when": "2026-10-24T17:12:20.212Z",
+  "base": "http://127.0.0.1:4334",
+  "results": [
+    {
+      "name": "app loads and landing frame reports ready",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "frame loads authored source URL",
+      "ok": true,
+      "detail": "/landing-pages/bestsellers-book-showcase.html"
+    },
+    {
+      "name": "served canonical HTML matches registered revision",
+      "ok": true,
+      "detail": "3546441 bytes, sha 7c1ed1ca4a4c"
+    },
+    {
+      "name": "authored document title",
+      "ok": true,
+      "detail": "Field Manuals — Tools for Thought"
+    },
+    {
+      "name": "hero word present",
+      "ok": true,
+      "detail": "Agents"
+    },
+    {
+      "name": "book gallery present",
+      "ok": true,
+      "detail": "3 book cards"
+    },
+    {
+      "name": "embedded media present",
+      "ok": true,
+      "detail": "3 videos"
+    },
+    {
+      "name": "brand and menu chrome present",
+      "ok": true,
+      "detail": "Field Manuals"
+    },
+    {
+      "name": "customization stylesheet appended",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "configured primary colour applied",
+      "ok": true,
+      "detail": "#c3a47b in override sheet"
+    },
+    {
+      "name": "configured heading size applied",
+      "ok": true,
+      "detail": "clamp ceiling 325px"
+    },
+    {
+      "name": "configured letter spacing applied",
+      "ok": true,
+      "detail": "-0.085em"
+    },
+    {
+      "name": "hero renders Iowan Old Style at weight 500",
+      "ok": true,
+      "detail": "\"Iowan Old Style\", Baskerville, \"Times New Roman\", serif 500"
+    },
+    {
+      "name": "book opens into detail view",
+      "ok": true,
+      "detail": "Codex (gallery -> detail)"
+    },
+    {
+      "name": "detail view closes back to gallery",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "menu layer opens with links",
+      "ok": true,
+      "detail": "3 links"
+    },
+    {
+      "name": "embedded data-URL video is decodable",
+      "ok": true,
+      "detail": "readyState 4, t=1.36s, src data:video"
+    },
+    {
+      "name": "phone viewport renders authored responsive layout",
+      "ok": true,
+      "detail": "hero 331px wide"
+    },
+    {
+      "name": "no console/page errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
