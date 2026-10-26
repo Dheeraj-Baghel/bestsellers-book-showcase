@@ -1,5 +1,5 @@
 {
-  "when": "2026-10-24T17:12:20.212Z",
+  "when": "2026-10-26T08:04:32.636Z",
   "base": "http://127.0.0.1:4334",
   "results": [
     {
@@ -85,7 +85,7 @@
     {
       "name": "embedded data-URL video is decodable",
       "ok": true,
-      "detail": "readyState 4, t=1.36s, src data:video"
+      "detail": "readyState 4, t=6.85s, src data:video"
     },
     {
       "name": "phone viewport renders authored responsive layout",

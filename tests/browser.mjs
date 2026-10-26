@@ -11,7 +11,11 @@ import { chromium } from "@playwright/test";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const PORT = 4334;
-const BASE = `http://127.0.0.1:${PORT}`;
+// TEST_BASE_URL runs the same checks against a deployed origin (e.g. Vercel);
+// results/screenshots then go to artifacts/testing/live so local evidence is kept.
+const REMOTE = process.env.TEST_BASE_URL?.replace(/\/$/, "");
+const BASE = REMOTE || `http://127.0.0.1:${PORT}`;
+const OUT = path.join(root, REMOTE ? "artifacts/testing/live" : "artifacts/testing");
 const TYPES = {
   ".html": "text/html; charset=utf-8",
   ".js": "text/javascript",
@@ -51,7 +55,7 @@ const server = createServer(async (req, res) => {
     res.end("not found");
   }
 });
-await new Promise((resolve) => server.listen(PORT, "127.0.0.1", resolve));
+if (!REMOTE) await new Promise((resolve) => server.listen(PORT, "127.0.0.1", resolve));
 
 const results = [];
 const check = (name, ok, detail = "") => {
@@ -198,20 +202,20 @@ try {
   await frame.click(".icon-button");
   await frame.waitForTimeout(1200);
 
-  await mkdir(path.join(root, "artifacts/testing"), { recursive: true });
-  await page.screenshot({ path: path.join(root, "artifacts/testing/hero-desktop.png") });
-  await phone.screenshot({ path: path.join(root, "artifacts/testing/hero-mobile.png") });
+  await mkdir(OUT, { recursive: true });
+  await page.screenshot({ path: path.join(OUT, "hero-desktop.png") });
+  await phone.screenshot({ path: path.join(OUT, "hero-mobile.png") });
   await frame.click(".book-card");
   await frame.waitForTimeout(2200);
-  await page.screenshot({ path: path.join(root, "artifacts/testing/detail-desktop.png") });
+  await page.screenshot({ path: path.join(OUT, "detail-desktop.png") });
   await writeFile(
-    path.join(root, "artifacts/testing/browser-results.json"),
+    path.join(OUT, "browser-results.json"),
     JSON.stringify({ when: new Date().toISOString(), base: BASE, results }, null, 2),
   );
   console.log(`\n${results.filter((r) => r.ok).length}/${results.length} checks passed`);
 } finally {
   await browser.close();
-  server.close();
+  if (server.listening) server.close();
   // The server keeps alive sockets open; the run is complete, so exit.
   setTimeout(() => process.exit(process.exitCode ?? 0), 500).unref();
 }
